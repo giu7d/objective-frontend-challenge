@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const AppBarStyled = styled.nav`
+export const AppBarStyled = styled.header`
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -9,12 +9,13 @@ export const AppBarStyled = styled.nav`
 
   padding: 1.5rem 2rem;
   width: 100%;
+  z-index: 99;
 
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.foreground};
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
   & > .logo {
-    height: 38px;
+    height: 34px;
   }
 
   & > .information {

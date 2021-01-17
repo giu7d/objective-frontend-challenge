@@ -1,10 +1,11 @@
 import React from 'react'
 
-import logo from '../../assets/logo.svg'
-import logoSmall from '../../assets/logo-abrev.svg'
-import { useWindowSize } from '../../hooks/useWindowSize'
-import { Avatar } from '../Avatar'
+import { useWindowSize } from '../../../hooks/useWindowSize'
+import { Avatar } from '../../fragments/Avatar'
 import { AppBarStyled } from './styles'
+
+import logo from '../../../assets/logo.svg'
+import logoSmall from '../../../assets/logo-abrev.svg'
 
 export const AppBar: React.FC = () => {
   const { width } = useWindowSize()

@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Avatar = styled.div`
-  height: 42px;
-  width: 42px;
+  height: 38px;
+  width: 38px;
   border-radius: 1rem;
 
   display: flex;
@@ -10,7 +10,7 @@ export const Avatar = styled.div`
   justify-content: center;
 
   font-weight: bold;
-  font-size: 1.25rem;
+  font-size: 1rem;
 
-  background-color: ${({ theme }) => theme.colors.foreground};
+  background-color: ${({ theme }) => theme.colors.background};
 `
