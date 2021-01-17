@@ -27,8 +27,10 @@ export const HeroItemStyled = styled.div`
     text-transform: capitalize;
 
     img {
-      max-width: 84px;
+      width: 84px;
+      height: 84px;
       border-radius: 8px;
+      background-color: ${({ theme }) => theme.colors.background};
     }
   }
 
@@ -52,7 +54,8 @@ export const HeroItemStyled = styled.div`
       font-size: 1.15rem;
 
       img {
-        max-width: 64px;
+        height: 64px;
+        width: 64px;
       }
     }
 

@@ -11,6 +11,7 @@ export const PaginationStyled = styled.div`
     display: flex;
     flex-direction: row;
     gap: 8px;
+    align-items: center;
   }
 
   & > div:first-child {

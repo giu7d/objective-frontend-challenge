@@ -6,13 +6,19 @@ export const HeroIndexStyled = styled.main`
   display: flex;
   flex-direction: column;
   margin: auto;
-  gap: 1rem;
+  gap: 2rem;
 
   max-width: 900px;
 
   & > h1 {
     font-size: 2rem;
     font-weight: bold;
+  }
+
+  @media screen and (min-width: 600px) {
+    & > h1 {
+      font-size: 2.5rem;
+    }
   }
 `
 export const HeroIndexPaginationStyled = styled.div`

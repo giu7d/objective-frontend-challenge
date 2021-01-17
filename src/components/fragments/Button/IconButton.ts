@@ -8,4 +8,6 @@ export const IconButton = styled(BaseButton)`
   background-color: inherit;
   align-items: center;
   align-content: center;
+  font-size: 1.25rem;
+  color: ${({ theme }) => theme.colors.text};
 `
