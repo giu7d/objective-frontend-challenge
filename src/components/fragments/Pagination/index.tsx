@@ -7,7 +7,7 @@ import {
 } from 'react-icons/fi'
 import { v4 as uuid } from 'uuid'
 
-import { IconButton } from '../../fragments/Button/IconButton'
+import { IconButton } from '../Button/IconButton'
 import { PaginationStyled, PageSelectionButton } from './styles'
 
 interface IPaginationProps {

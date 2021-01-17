@@ -1,11 +1,6 @@
 import styled from 'styled-components'
 
-export const HeroListStyled = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-`
-export const HeroListHeaderStyled = styled.div`
+export const HeroListHeader = styled.div`
   display: grid;
   margin-top: 24px;
   gap: 8px;

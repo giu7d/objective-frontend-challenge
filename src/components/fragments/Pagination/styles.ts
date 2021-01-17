@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { IconButton } from '../../fragments/Button/IconButton'
+import { IconButton } from '../Button/IconButton'
 
 export const PaginationStyled = styled.div`
   display: grid;

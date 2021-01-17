@@ -23,7 +23,7 @@ export const API = Axios.create({
 export const fetcher = (url: string, configs?: AxiosRequestConfig) =>
   API.get(url, configs).then(res => res.data)
 
-export const fetcherWithPagination = (
+export const fetcherWithQuery = (
   url: string,
   offset: number,
   limit: number,
