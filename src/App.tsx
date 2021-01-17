@@ -1,17 +1,18 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
 
-import { Theme } from './themes/default'
+import { DefaultTemplate } from './components/templates/DefaultTemplate'
 import { GlobalStyle } from './styles/global'
-import { AppBar } from './components/containers/AppBar'
 import { HeroIndex } from './pages/Hero/Index'
+import { Theme } from './themes/default'
 
 export const App: React.FC = () => {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
-      <AppBar />
-      <HeroIndex />
+      <DefaultTemplate>
+        <HeroIndex />
+      </DefaultTemplate>
     </ThemeProvider>
   )
 }
