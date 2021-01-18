@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-export const AppBarStyled = styled.header`
+interface IAppBarStyled {
+  hasShadow?: boolean
+}
+
+export const AppBarStyled = styled.header<IAppBarStyled>`
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -12,7 +16,10 @@ export const AppBarStyled = styled.header`
   z-index: 99;
 
   background-color: ${({ theme }) => theme.colors.foreground};
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: ${({ hasShadow = true }) =>
+    hasShadow ? '0 5px 10px rgba(0, 0, 0, 0.1)' : 'none'};
+
+  transition: box-shadow ease-in-out 200ms;
 
   & > .logo {
     height: 34px;
