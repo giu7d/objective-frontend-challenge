@@ -1,12 +1,5 @@
-import React, { createContext, Dispatch, useReducer } from 'react'
-import { IAction } from '../reducers/action'
+import React, { createContext, useReducer } from 'react'
 import { reducer } from '../reducers/reducer'
-
-export interface IGlobalStore {
-  heroLimit: number
-  heroOffset: number
-  heroTotal: number
-}
 
 export const initialState: IGlobalStore = {
   heroLimit: 10,
@@ -14,14 +7,9 @@ export const initialState: IGlobalStore = {
   heroTotal: 0
 }
 
-interface IGlobalContext {
-  state: IGlobalStore
-  dispatch: Dispatch<IAction>
-}
-
-export const GlobalContext = createContext<IGlobalContext>({
+export const GlobalContext = createContext<IContext<IGlobalStore>>({
   state: initialState,
-  dispatch: () => undefined
+  dispatch: () => {}
 })
 
 export const GlobalStore: React.FC = ({ children }) => {

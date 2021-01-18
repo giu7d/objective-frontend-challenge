@@ -1,5 +1,4 @@
-import { IGlobalStore } from '../stores/GlobalStore'
-import { ActionTypes, IAction } from './action'
+import { ActionTypes } from './action'
 
 export const reducer = (state: IGlobalStore, action: IAction) => {
   switch (action.type) {

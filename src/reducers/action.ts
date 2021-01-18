@@ -4,11 +4,6 @@ export enum ActionTypes {
   SET_HERO_TOTAL = 'SET_HERO_TOTAL'
 }
 
-export interface IAction {
-  type: ActionTypes
-  payload: number
-}
-
 export const setHeroLimit = (limit: number) => {
   return {
     type: ActionTypes.SET_HERO_LIMIT,

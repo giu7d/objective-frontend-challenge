@@ -6,14 +6,14 @@ import { HeroItem } from '../../../fragments/Hero/List/Item'
 import { HeroListStyled } from './styles'
 
 export const HeroList: React.FC = () => {
-  const { heros = [], isError, isLoading } = useHeros()
+  const { heros, isError, isLoading } = useHeros()
 
   if (isError) {
-    return <div>error...</div>
+    return <div>Error...</div>
   }
 
   if (isLoading) {
-    return <div>loading...</div>
+    return <div>Loading...</div>
   }
 
   return (
