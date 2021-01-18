@@ -14,12 +14,24 @@ export const PaginationStyled = styled.div`
     align-items: center;
   }
 
+  & > div > span {
+    display: none;
+  }
+
   & > div:first-child {
     justify-self: flex-end;
   }
 
   & > div:last-child {
     justify-self: flex-start;
+  }
+
+  @media screen and (min-width: 600px) {
+    & > div > span {
+      display: inline;
+      font-size: 18px;
+      opacity: 0.5;
+    }
   }
 `
 

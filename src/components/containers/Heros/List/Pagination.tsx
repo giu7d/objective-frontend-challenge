@@ -2,7 +2,7 @@ import React from 'react'
 import { useHeros } from '../../../../hooks/useHeros'
 import { Pagination } from '../../../fragments/Pagination'
 
-export const HeroListPagination = () => {
+export const HerosListPagination = () => {
   const { limit, offset, total, setOffset } = useHeros()
 
   const goToPage = (page: number) => {

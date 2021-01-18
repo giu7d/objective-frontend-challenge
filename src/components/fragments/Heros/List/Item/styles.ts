@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeroItemStyled = styled.div`
+export const HerosItemStyled = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   padding: 14px;
@@ -12,6 +12,7 @@ export const HeroItemStyled = styled.div`
 
   background-color: ${({ theme }) => theme.colors.foreground};
   transition: all ease-in-out 200ms;
+  cursor: pointer;
 
   &:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeroListHeader = styled.div`
+export const HerosListHeader = styled.div`
   display: grid;
   margin-top: 24px;
   gap: 8px;

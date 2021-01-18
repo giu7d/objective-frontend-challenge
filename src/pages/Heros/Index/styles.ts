@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const HeroIndexStyled = styled.main`
+export const HerosIndexStyled = styled.main`
   padding: 124px 2rem;
 
   display: flex;
@@ -21,7 +21,7 @@ export const HeroIndexStyled = styled.main`
     }
   }
 `
-export const HeroIndexPaginationStyled = styled.div`
+export const HerosIndexPaginationStyled = styled.div`
   position: fixed;
   display: flex;
   justify-content: center;

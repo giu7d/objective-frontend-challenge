@@ -25,17 +25,14 @@ export const Pagination: React.FC<IPaginationProps> = ({
   onClick = () => {}
 }) => {
   const visiblePages = (array: any[]) => {
-    // Array Begin
     if (selectedPage < HALF_ITEMS_VISIBLE) {
       return array.slice(0, ITEMS_VISIBLE)
     }
 
-    // Array End
     if (selectedPage >= pages - 1) {
       return array.slice(pages - ITEMS_VISIBLE + 1, pages + 1)
     }
 
-    // Array Mid
     const previousItemsVisible = selectedPage - HALF_ITEMS_VISIBLE
     const nextItemsVisible = selectedPage + HALF_ITEMS_VISIBLE + 1
     return array.slice(previousItemsVisible, nextItemsVisible)

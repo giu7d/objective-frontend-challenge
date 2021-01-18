@@ -2,11 +2,11 @@ import React from 'react'
 import { v4 as uuid } from 'uuid'
 import { randomValueInRange } from '../../../../../utils'
 import { Shimmer } from '../../../Shimmer'
-import { HeroItemStyled } from './styles'
+import { HerosItemStyled } from './styles'
 
-export const HeroItemShimmer: React.FC = () => {
+export const HerosItemShimmer: React.FC = () => {
   return (
-    <HeroItemStyled>
+    <HerosItemStyled>
       <div className="character">
         <Shimmer
           style={{
@@ -55,6 +55,6 @@ export const HeroItemShimmer: React.FC = () => {
             </li>
           ))}
       </ul>
-    </HeroItemStyled>
+    </HerosItemStyled>
   )
 }

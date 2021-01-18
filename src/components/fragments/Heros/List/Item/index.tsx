@@ -2,23 +2,25 @@
 import React from 'react'
 import { v4 as uuid } from 'uuid'
 
-import { HeroItemStyled } from './styles'
+import { HerosItemStyled } from './styles'
 
 interface IHeroItemProps {
   thumbnailURL: string
   name: string
   series: { name: string }[]
   events: { name: string }[]
+  onClick?: () => void
 }
 
-export const HeroItem: React.FC<IHeroItemProps> = ({
+export const HerosItem: React.FC<IHeroItemProps> = ({
   thumbnailURL,
   name,
   events,
-  series
+  series,
+  onClick = () => {}
 }) => {
   return (
-    <HeroItemStyled>
+    <HerosItemStyled onClick={onClick}>
       <div className="character">
         <img src={thumbnailURL} />
         <span>{name}</span>
@@ -33,6 +35,6 @@ export const HeroItem: React.FC<IHeroItemProps> = ({
           <li key={uuid()}>{name}</li>
         ))}
       </ul>
-    </HeroItemStyled>
+    </HerosItemStyled>
   )
 }

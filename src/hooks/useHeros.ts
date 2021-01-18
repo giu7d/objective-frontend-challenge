@@ -18,7 +18,7 @@ export const useHeros = () => {
   const setTotal = (total: number) => dispatch(setHeroTotal(total))
 
   useEffect(() => {
-    if (data && !error) setTotal(data.data.total)
+    if (data) setTotal(data.data.total)
   }, [data])
 
   return {
