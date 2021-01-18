@@ -3,7 +3,7 @@ import { useHeros } from '../../../../hooks/useHeros'
 import { Pagination } from '../../../fragments/Pagination'
 
 export const HeroListPagination = () => {
-  const { limit, offset, total = 10, setOffset } = useHeros()
+  const { limit, offset, total, setOffset } = useHeros()
 
   const goToPage = (page: number) => {
     setOffset(page * limit)

@@ -3,7 +3,7 @@ import React from 'react'
 import { SearchInput } from '../../../components/fragments/SearchInput'
 import { HeroList } from '../../../components/containers/Hero/List'
 import { HeroIndexPaginationStyled, HeroIndexStyled } from './styles'
-import { HeroListPagination } from '../../../components/containers/Hero/List/HeroListPagination'
+import { HeroListPagination } from '../../../components/containers/Hero/List/Pagination'
 
 export const HeroIndex: React.FC = () => {
   return (
