@@ -20,6 +20,12 @@ export const reducer = (state: IGlobalStore, action: IAction) => {
         heroTotal: action.payload
       }
 
+    case ActionTypes.SET_HERO_NAME_SEARCH:
+      return {
+        ...state,
+        heroNameSearch: action.payload
+      }
+
     default:
       return state
   }

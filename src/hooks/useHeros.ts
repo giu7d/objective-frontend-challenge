@@ -1,13 +1,23 @@
 import { useContext, useEffect } from 'react'
 import useSWR from 'swr'
-import { setHeroLimit, setHeroOffset, setHeroTotal } from '../reducers/action'
+import {
+  setHeroLimit,
+  setHeroOffset,
+  setHeroNameSearch,
+  setHeroTotal
+} from '../reducers/action'
 import { fetcherWithQuery } from '../services/MarvelAPI'
 import { GlobalContext } from '../stores/GlobalStore'
 export const useHeros = () => {
   const { state, dispatch } = useContext(GlobalContext)
 
   const { data, error } = useSWR<IMarvelCharactersResponse>(
-    ['/v1/public/characters', state.heroOffset, state.heroLimit],
+    [
+      '/v1/public/characters',
+      state.heroOffset,
+      state.heroLimit,
+      state.heroNameSearch
+    ],
     fetcherWithQuery
   )
 
@@ -16,6 +26,11 @@ export const useHeros = () => {
   const setOffset = (offset: number) => dispatch(setHeroOffset(offset))
 
   const setTotal = (total: number) => dispatch(setHeroTotal(total))
+
+  const setSearchByName = (search: string, offset = 0) => {
+    setOffset(offset)
+    dispatch(setHeroNameSearch(search))
+  }
 
   useEffect(() => {
     if (data) setTotal(data.data.total)
@@ -30,6 +45,7 @@ export const useHeros = () => {
     isError: error,
     setLimit,
     setOffset,
-    setTotal
+    setTotal,
+    setSearchByName
   }
 }

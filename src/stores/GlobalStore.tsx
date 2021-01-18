@@ -4,7 +4,8 @@ import { reducer } from '../reducers/reducer'
 export const initialState: IGlobalStore = {
   heroLimit: 10,
   heroOffset: 0,
-  heroTotal: 0
+  heroTotal: 0,
+  heroNameSearch: ''
 }
 
 export const GlobalContext = createContext<IContext<IGlobalStore>>({

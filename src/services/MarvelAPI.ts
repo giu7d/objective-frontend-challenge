@@ -27,9 +27,15 @@ export const fetcherWithQuery = (
   url: string,
   offset: number,
   limit: number,
+  name?: string,
   configs?: AxiosRequestConfig
 ) =>
   API.get(url, {
     ...configs,
-    params: { ...configs?.params, offset, limit }
+    params: {
+      ...configs?.params,
+      offset,
+      limit,
+      nameStartsWith: name === '' ? undefined : name
+    }
   }).then(res => res.data)
