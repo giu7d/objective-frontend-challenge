@@ -1,3 +1,4 @@
+import { initialState } from '../stores/GlobalStore'
 import { ActionTypes } from './action'
 
 export const reducer = (state: IGlobalStore, action: IAction) => {
@@ -24,6 +25,11 @@ export const reducer = (state: IGlobalStore, action: IAction) => {
       return {
         ...state,
         heroNameSearch: action.payload
+      }
+
+    case ActionTypes.RESET:
+      return {
+        ...initialState
       }
 
     default:
