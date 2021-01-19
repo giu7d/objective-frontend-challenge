@@ -23,7 +23,7 @@ export const HerosListSearch: React.FC = () => {
       name="search"
       value={state.heroNameSearch}
       label="Nome do personagem"
-      placeholder="search"
+      placeholder="Search"
       onChange={handleSearch}
     />
   )

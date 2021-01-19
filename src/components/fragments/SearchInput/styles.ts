@@ -17,6 +17,9 @@ export const SearchInputStyled = styled.div`
     border-radius: 4px;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
+  input::placeholder {
+    font-style: italic;
+  }
 
   @media screen and (min-width: 600px) {
     width: 350px;
