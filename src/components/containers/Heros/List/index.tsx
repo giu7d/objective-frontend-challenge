@@ -22,8 +22,12 @@ export const HerosList: React.FC = () => {
         <HerosListHeader />
         <Warning>
           <FiAlertTriangle className="icon" />
-          <h3 className="title">Erro</h3>
-          <p className="content">{isError.message}</p>
+          <h3 className="title">Atenção</h3>
+          <p className="content">
+            Não foi possível listar os heróis, devido ao erro:
+            <br />
+            <i>{isError.message}</i>
+          </p>
         </Warning>
       </HeroListStyled>
     )
