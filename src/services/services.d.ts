@@ -28,6 +28,7 @@ interface IMarvelIndexCharactersResponse {
 interface IMarvelShowCharacterResponse {
   data: {
     results: {
+      id: number
       name: string
       description: string
       thumbnail: {
@@ -61,6 +62,20 @@ interface IMarvelShowCharacterResponse {
           resourceURI: string
           name: string
         }[]
+      }
+    }[]
+  }
+}
+
+interface IMarvelIndexCharacterResourceResponse {
+  data: {
+    results: {
+      id: number
+      title: string
+      description: string
+      thumbnail: {
+        path: string
+        extension: string
       }
     }[]
   }
