@@ -18,25 +18,25 @@ export const HeroDetailAppearances: React.FC<IHeroDetailAppearancesProps> = prop
       {props.comics !== 0 && (
         <Badge backgroundColor={theme.colors.primary}>
           HQs
-          <span>{props.comics}</span>
+          <span className="badge-value">{props.comics}</span>
         </Badge>
       )}
       {props.series !== 0 && (
         <Badge backgroundColor={theme.colors.warn}>
           Séries
-          <span>{props.series}</span>
+          <span className="badge-value">{props.series}</span>
         </Badge>
       )}
       {props.stories !== 0 && (
         <Badge backgroundColor={theme.colors.danger}>
           Estórias
-          <span>{props.stories}</span>
+          <span className="badge-value">{props.stories}</span>
         </Badge>
       )}
       {props.events !== 0 && (
         <Badge backgroundColor={theme.colors.info}>
           Eventos
-          <span>{props.events}</span>
+          <span className="badge-value">{props.events}</span>
         </Badge>
       )}
     </HeroAppearancesStyled>

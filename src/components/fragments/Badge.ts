@@ -20,7 +20,7 @@ export const Badge = styled.div<IBadge>`
     backgroundColor || theme.colors.primary};
   color: ${({ theme }) => theme.colors.foreground};
 
-  & > span {
+  & > .badge-value {
     background-color: rgba(0, 0, 0, 0.2);
     padding: 8px;
     border-radius: 24px;

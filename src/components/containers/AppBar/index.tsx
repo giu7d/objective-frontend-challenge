@@ -23,8 +23,11 @@ export const AppBar: React.FC = () => {
 
   return (
     <AppBarStyled hasShadow={offsetY > TOP_DISTANCE} onClick={goToHomePage}>
-      <img className="logo" src={width > WIDTH_SIZE ? logo : logoSmall} />
-      <div className="information">
+      <img
+        className="appbar-logo"
+        src={width > WIDTH_SIZE ? logo : logoSmall}
+      />
+      <div className="appbar-information">
         <span>
           <b>Giuseppe Setem</b> Teste de Front-End
         </span>

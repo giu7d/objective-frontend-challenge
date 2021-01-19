@@ -21,12 +21,12 @@ export const AppBarStyled = styled.header<IAppBarStyled>`
 
   transition: box-shadow ease-in-out 200ms;
 
-  & > .logo {
+  & > .appbar-logo {
     height: 34px;
     cursor: pointer;
   }
 
-  & > .information {
+  & > .appbar-information {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -35,7 +35,7 @@ export const AppBarStyled = styled.header<IAppBarStyled>`
   }
 
   @media screen and (max-width: 600px) {
-    & > .information > span {
+    & > .appbar-information > span {
       display: none;
     }
   }

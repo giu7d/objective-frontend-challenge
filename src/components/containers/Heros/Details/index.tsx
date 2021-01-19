@@ -18,9 +18,9 @@ export const HeroDetails: React.FC<IHeroDetailsProps> = ({ heroId }) => {
     return (
       <HeroDetailsStyled>
         <Warning>
-          <FiAlertTriangle className="icon" />
-          <h3 className="title">Atenção</h3>
-          <p className="content">
+          <FiAlertTriangle className="warning-icon" />
+          <h3 className="warning-title">Atenção</h3>
+          <p className="warning-content">
             Não foi possível obter informações sobre o herói ID {heroId}, devido
             ao erro:
             <br />

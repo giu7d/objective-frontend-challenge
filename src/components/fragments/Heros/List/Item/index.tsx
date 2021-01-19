@@ -21,16 +21,16 @@ export const HerosItem: React.FC<IHeroItemProps> = ({
 }) => {
   return (
     <HerosItemStyled onClick={onClick}>
-      <div className="character">
+      <div className="item-character">
         <img src={thumbnailURL} />
         <span>{name}</span>
       </div>
-      <ul className="list">
+      <ul className="item-list">
         {series.map(({ name }) => (
           <li key={uuid()}>{name}</li>
         ))}
       </ul>
-      <ul className="list">
+      <ul className="item-list">
         {events.map(({ name }) => (
           <li key={uuid()}>{name}</li>
         ))}

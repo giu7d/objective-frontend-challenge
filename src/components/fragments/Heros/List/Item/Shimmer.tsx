@@ -7,7 +7,7 @@ import { HerosItemStyled } from './styles'
 export const HerosItemShimmer: React.FC = () => {
   return (
     <HerosItemStyled>
-      <div className="character">
+      <div className="item-character">
         <Shimmer
           style={{
             width: 64,
@@ -25,7 +25,7 @@ export const HerosItemShimmer: React.FC = () => {
           />
         </span>
       </div>
-      <ul className="list">
+      <ul className="item-list">
         {Array(randomValueInRange(1, 3))
           .fill('')
           .map(() => (
@@ -40,7 +40,7 @@ export const HerosItemShimmer: React.FC = () => {
             </li>
           ))}
       </ul>
-      <ul className="list">
+      <ul className="item-list">
         {Array(randomValueInRange(1, 3))
           .fill('')
           .map(() => (

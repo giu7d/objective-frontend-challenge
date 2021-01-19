@@ -15,19 +15,19 @@ export const Warning = styled.div`
 
   background-color: ${({ theme }) => theme.colors.foreground};
 
-  & > .icon {
+  & > .warning-icon {
     grid-area: icon;
     margin-right: 24px;
     font-size: 3rem;
     color: ${({ theme }) => theme.colors.danger};
   }
 
-  & > .title {
+  & > .warning-title {
     grid-area: title;
     font-size: 2rem;
   }
 
-  & > .content {
+  & > .warning-content {
     grid-area: content;
   }
 `

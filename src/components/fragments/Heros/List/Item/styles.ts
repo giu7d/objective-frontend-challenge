@@ -18,7 +18,7 @@ export const HerosItemStyled = styled.div`
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   }
 
-  & > .character {
+  & > .item-character {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -35,7 +35,7 @@ export const HerosItemStyled = styled.div`
     }
   }
 
-  & > .list {
+  & > .item-list {
     display: none;
     overflow: hidden;
     white-space: nowrap;
@@ -50,7 +50,7 @@ export const HerosItemStyled = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    & > .character {
+    & > .item-character {
       gap: 14px;
       font-size: 1.15rem;
 
@@ -60,7 +60,7 @@ export const HerosItemStyled = styled.div`
       }
     }
 
-    & > .list {
+    & > .item-list {
       display: inline;
     }
   }
