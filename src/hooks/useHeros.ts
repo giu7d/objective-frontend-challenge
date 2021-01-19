@@ -11,7 +11,7 @@ import { GlobalContext } from '../stores/GlobalStore'
 export const useHeros = () => {
   const { state, dispatch } = useContext(GlobalContext)
 
-  const { data, error } = useSWR<IMarvelCharactersResponse>(
+  const { data, error } = useSWR<IMarvelIndexCharactersResponse>(
     [
       '/v1/public/characters',
       state.heroOffset,

@@ -23,6 +23,7 @@ export const AppBarStyled = styled.header<IAppBarStyled>`
 
   & > .logo {
     height: 34px;
+    cursor: pointer;
   }
 
   & > .information {
