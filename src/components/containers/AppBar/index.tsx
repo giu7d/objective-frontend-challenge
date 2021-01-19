@@ -22,6 +22,7 @@ export const AppBar: React.FC = () => {
 
   const goToHomePage = () => {
     history.push('/')
+    window.scrollTo({ top: 0 })
     dispatch(reset())
   }
 
