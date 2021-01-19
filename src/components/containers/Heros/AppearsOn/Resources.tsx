@@ -1,6 +1,10 @@
 import React from 'react'
-import { useHeroResources } from '../../../../hooks/useHeroResources'
+import { v4 as uuid } from 'uuid'
+
+import { HeroAppearsOnItemShimmer } from '../../../fragments/Heros/AppearsOn/Item/Shimmer'
 import { HeroAppearsOnItem } from '../../../fragments/Heros/AppearsOn/Item'
+import { useHeroResources } from '../../../../hooks/useHeroResources'
+import { randomValueInRange } from '../../../../utils'
 
 interface IHeroAppearsOnResourcesProps {
   resourceType: string
@@ -18,8 +22,19 @@ export const HeroAppearsOnResources: React.FC<IHeroAppearsOnResourcesProps> = ({
     heroId
   )
 
-  if (isError || isLoading) {
+  if (isError) {
     return null
+  }
+  if (isLoading) {
+    return (
+      <>
+        {Array(randomValueInRange(1, 5))
+          .fill('')
+          .map(() => (
+            <HeroAppearsOnItemShimmer key={uuid()} />
+          ))}
+      </>
+    )
   }
 
   return (

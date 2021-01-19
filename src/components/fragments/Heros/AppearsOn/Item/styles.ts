@@ -4,17 +4,19 @@ export const HeroAppearsOnItemStyled = styled.div`
   display: flex;
   flex-direction: column;
   overflow: hidden;
-
-  width: 300px;
+  width: 100%;
   height: 350px;
   border-radius: 8px;
-
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 200ms;
 
   & > .item-cover {
     overflow: hidden;
     height: 250px;
     transition: all ease-in-out 200ms;
+    img {
+      width: 100%;
+    }
   }
 
   & > .item-detail {
@@ -43,8 +45,6 @@ export const HeroAppearsOnItemStyled = styled.div`
     }
   }
 
-  transition: all ease-in-out 200ms;
-
   &:hover {
     & > .item-cover {
       height: 50px;
@@ -55,7 +55,10 @@ export const HeroAppearsOnItemStyled = styled.div`
       margin-top: 14px;
       font-size: 1.2rem;
     }
-
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 300px;
   }
 `
